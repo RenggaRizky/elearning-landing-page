@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f6f8fd;
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+  color: #393e46;
+  text-decoration: none;
+}
+h1 {
+  font-size: 2.25rem;
+}
+p {
+  color: #393e46;
+}
+.btn {
+  border: none;
+  background-color: #00adb5;
+  color: #f6f8fd;
+  border-radius: 25px;
+}
+
+/* Navigation Bar */
+nav {
+  padding: 1.875rem 6.25rem 0 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.link-menu > ul {
+  display: flex;
+}
+.link-menu > ul > li {
+  margin: 0.75rem 1.75rem;
+}
+.login > ul {
+  display: flex;
+}
+.login > ul > li > a {
+  margin: 0.75rem 1.875rem;
+  display: inline-block;
+}
+.login > ul > li > button {
+  padding: 0.75rem 1.125rem;
+}
+
+/* Header */
+.head-container {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.head-text {
+  margin-top: 11.5625rem;
+  margin-right: 8rem;
+}
+.head-text > h1 {
+  color: #00adb5;
+  line-height: 39.92px;
+  font-weight: 600;
+}
+.head-text > p {
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-right: 6rem;
+  line-height: 17.74px;
+}
+.head-text > .btn {
+  padding: 0.9375rem 3.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 6rem;
+}
+.head-img > img {
+  margin-top: 6.5rem;
+}

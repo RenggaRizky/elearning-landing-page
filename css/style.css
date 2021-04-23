@@ -46,7 +46,7 @@ p {
   border-radius: 2.125rem;
   flex: auto;
   /* margin: 0 2rem; */
-  position: relative;
+  /* position: relative; */
 }
 
 /* Navigation Bar */
@@ -102,7 +102,7 @@ nav {
   cursor: pointer;
 }
 .head-img > img {
-  max-width: 38.1875rem;
+  width: 38.1875rem;
 }
 
 /* Courses */
@@ -117,7 +117,7 @@ nav {
 }
 .courses-img {
   margin: 4rem 0 1rem 0;
-  max-width: 6.875rem;
+  width: 6.875rem;
 }
 .course-title {
   font-weight: 700;
@@ -128,7 +128,8 @@ nav {
   border-radius: 7px;
   font-size: 1rem;
   cursor: pointer;
-  padding: 0.5rem 4rem;
+  padding: 0.5rem 0;
+  width: 80%;
   text-align: center;
   margin: 4rem 0 2rem 0;
 }
@@ -139,5 +140,96 @@ nav {
 
 /* Blogs */
 .blogs {
+  width: 33.33%;
+  margin-bottom: 2rem;
+}
+.blogs:nth-child(2),
+.blogs:nth-child(3) {
+  margin-left: 3rem;
+}
+
+.blogs > img {
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 2.125rem;
+  border-top-right-radius: 2.125rem;
+}
+.blog-text {
+  margin: 1.5625rem 1.25rem 0 1.25rem;
+}
+.blog-text > h2 {
+  font-size: 1.125rem;
+  margin-bottom: 1.5625rem;
+  font-weight: 700;
+}
+.blog-text > .blog-desc {
+  font-size: 0.75rem;
+}
+.read-more {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #00adb5;
+  font-weight: bolder;
+  font-size: 1.125rem;
+  display: block;
+  margin: 3rem auto;
+}
+
+/* Events */
+.event {
+  width: 33.33%;
+  height: 70vh;
+}
+.event:nth-child(2),
+.event:nth-child(3) {
+  margin-left: 3rem;
+}
+.event > img {
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 2.125rem;
+  border-top-right-radius: 2.125rem;
+}
+.event-text {
+  margin: 1.5625rem 1.25rem 0 1.25rem;
+}
+.event-text > h2 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+.event-text > .event-desc {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.datetime-event {
   display: flex;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+.datetime-event > i {
+  font-size: 1.5625rem;
+}
+.datetime-event > .datetime-desc {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #696969;
+  margin: auto 1rem;
+}
+.datetime-desc:nth-child(2) {
+  margin-right: 1.5rem;
+}
+.event-btn {
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  cursor: pointer;
+}
+hr {
+  margin-bottom: 1.5rem;
 }

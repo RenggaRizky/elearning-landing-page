@@ -20,6 +20,10 @@ p {
   background-color: #00adb5;
   color: #f6f8fd;
   border-radius: 25px;
+  opacity: 65%;
+}
+.btn:hover {
+  opacity: 100%;
 }
 .content-title {
   text-align: center;
@@ -41,11 +45,10 @@ p {
   justify-content: space-between;
 }
 .card {
-  background-color: #f6f8fd;
+  background-color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2.125rem;
   flex: auto;
-  /* margin: 0 2rem; */
   position: relative;
 }
 
@@ -55,6 +58,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .link-menu > ul {
   display: flex;
@@ -71,12 +75,42 @@ nav {
 }
 .login > ul > li > button {
   padding: 0.75rem 1.125rem;
+  width: 100%;
+}
+.active {
+  color: #00adb5;
+  font-weight: bold;
+  border-bottom: medium solid #00adb5;
+  padding-bottom: 0.5rem;
 }
 
+/* Responsive Navbar */
+/* #nav-toggle {
+  position: absolute;
+}
+nav > .icon-burger {
+  display: none;
+  background-color: transparent;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+nav > .icon-burger > .line {
+  width: 30px;
+  height: 4px;
+  background-color: #393e46;
+  margin: 5px;
+  border-radius: 3px;
+} */
+
 /* Header */
+header {
+  margin: 3.4375rem 6.25rem 7.8125rem 6.25rem;
+  position: relative;
+}
 .head-container {
   display: flex;
-  margin: 3.4375rem 6.25rem 7.8125rem 6.25rem;
 }
 .head-text {
   margin-top: 5.125rem;
@@ -94,12 +128,13 @@ nav {
   margin-top: 2.5rem;
   margin-right: 6rem;
 }
-.head-text > button {
+header > button {
   padding: 0.9375rem 3.5rem;
-  margin-top: 7.5rem;
   font-weight: 500;
   font-size: 1.125rem;
   cursor: pointer;
+  position: absolute;
+  top: 78%;
 }
 .head-img > img {
   width: 38.1875rem;
@@ -110,6 +145,7 @@ nav {
 .courses {
   width: 25%;
   text-align: center;
+  background-color: transparent;
 }
 .courses:nth-child(2),
 .courses:nth-child(3),
@@ -143,6 +179,7 @@ nav {
 .blogs {
   width: 33.33%;
   margin-bottom: 2rem;
+  background-color: transparent;
 }
 .blogs:nth-child(2),
 .blogs:nth-child(3) {
@@ -180,6 +217,7 @@ nav {
 .event {
   width: 33.33%;
   height: 70vh;
+  background-color: transparent;
 }
 .event:nth-child(2),
 .event:nth-child(3) {
@@ -240,6 +278,7 @@ hr {
   width: 33.33%;
   height: 60vh;
   text-align: center;
+  background-color: transparent;
 }
 .review:nth-child(2),
 .review:nth-child(3) {
@@ -286,9 +325,6 @@ q {
   text-align: center;
   padding: 4rem 0 1rem 0;
 }
-/* .biodata-top {
-  margin: 4rem 0 1rem 0;
-} */
 .biodata-bottom {
   background-color: #00adb5;
   position: absolute;
@@ -329,7 +365,7 @@ footer {
   margin-bottom: 1.375rem;
 }
 .company-desc > p {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   width: 50%;
 }
@@ -358,4 +394,107 @@ footer {
   text-align: center;
   font-size: 0.875rem;
   margin: 1.5rem 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 769px) {
+  header {
+    margin: 3.4375rem 4.375rem 5.5rem 4.375rem;
+  }
+  .container {
+    margin: 0 4.375rem 10.5rem 4.375rem;
+    display: flex;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .content-title > p {
+    size: 0.75rem;
+  }
+  .content-title > h1 {
+    font-size: 1.5rem;
+    margin-top: 0.1875rem;
+    margin-bottom: 2.5rem;
+  }
+  .card {
+    flex: auto;
+  }
+
+  /* Navbar */
+  nav {
+    justify-content: space-between;
+    padding: 1.875rem 4.375rem 0 4.375rem;
+  }
+  .link-menu > ul > li > a {
+    font-size: 0.875rem;
+  }
+  .nav > .logo > img {
+    width: 39px;
+  }
+  .login {
+    display: none;
+  }
+  .link-menu > ul > li {
+    margin: 0.75rem 1rem;
+  }
+  .head-img > img {
+    width: 16.875rem;
+  }
+
+  /* Header */
+  .head-text {
+    margin-top: 3rem;
+    margin-right: 2.625rem;
+    margin-bottom: 5.9375rem;
+  }
+  .head-text > h1 {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    color: #00adb5;
+  }
+  .head-text > p {
+    font-size: 0.75rem;
+    line-height: 13px;
+    margin-top: 0.875rem;
+    margin-right: 0;
+  }
+  header > button {
+    padding: 0.6875rem 0;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    top: 100%;
+  }
+
+  /* Course */
+  .courses {
+    width: 40%;
+    /* height: 25vh; */
+    margin-bottom: 1rem;
+  }
+  .courses:nth-child(2),
+  .courses:nth-child(3),
+  .courses:nth-child(4) {
+    margin-left: 0;
+  }
+  .courses:nth-child(2),
+  .courses:nth-child(4) {
+    margin-left: 1.5rem;
+  }
+  .courses-img {
+    margin: 1.25rem 0 1rem 0;
+    width: 3.75rem;
+  }
+  .course-title {
+    font-size: 1rem;
+  }
+  .courses-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0;
+    margin: 1rem 0 1.25rem 0;
+  }
+  #btnDataMining,
+  #btnSeo {
+    margin: 1rem 0 1.25rem 0;
+  }
 }

@@ -8,6 +8,11 @@
   color: #393e46;
   text-decoration: none;
 }
+section {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 7.8125rem;
+}
 h1 {
   font-size: 2.25rem;
   font-weight: 600;
@@ -37,12 +42,10 @@ p {
   margin-top: 0.5rem;
   margin-bottom: 4rem;
 }
-.container {
-  margin: 0 6.375rem 10.5rem 6.375rem;
-}
 .row {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 .card {
   background-color: #ffffff;
@@ -54,17 +57,23 @@ p {
 
 /* Navigation Bar */
 nav {
-  padding: 1.875rem 6.25rem 0 6.25rem;
+  padding-top: 1.875rem;
+  width: 85%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
+  margin: auto;
+}
+.logo {
+  max-width: 100%;
+}
+.logo > img {
+  max-width: 100%;
 }
 .link-menu > ul {
   display: flex;
 }
 .link-menu > ul > li {
-  margin: 0.75rem 1.75rem;
+  margin: 0.75rem 1.5rem;
 }
 .login > ul {
   display: flex;
@@ -84,66 +93,53 @@ nav {
   padding-bottom: 0.5rem;
 }
 
-/* Responsive Navbar */
-/* #nav-toggle {
-  position: absolute;
-}
-nav > .icon-burger {
-  display: none;
-  background-color: transparent;
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateX(-50%);
-}
-nav > .icon-burger > .line {
-  width: 30px;
-  height: 4px;
-  background-color: #393e46;
-  margin: 5px;
-  border-radius: 3px;
-} */
-
 /* Header */
 header {
-  margin: 3.4375rem 6.25rem 7.8125rem 6.25rem;
-  position: relative;
-}
-.head-container {
+  width: 85%;
+  margin: 3.4375rem auto 7.8125rem auto;
   display: flex;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.head-text,
+.head-img {
+  flex: 50%;
 }
 .head-text {
   margin-top: 5.125rem;
-  margin-right: 2.6875rem;
+  flex-direction: column;
 }
 .head-text > h1 {
   font-weight: 600;
   line-height: 3rem;
   color: #00adb5;
-  font-size: 2.875rem;
+  font-size: 2.625rem;
 }
 .head-text > p {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 17.74px;
   margin-top: 2.5rem;
   margin-right: 6rem;
 }
-header > button {
+.head-text > button {
   padding: 0.9375rem 3.5rem;
   font-weight: 500;
   font-size: 1.125rem;
   cursor: pointer;
-  position: absolute;
-  top: 78%;
+  margin-top: 6.05rem;
 }
 .head-img > img {
-  width: 38.1875rem;
+  /* max-width: 38.1875rem; */
+  max-width: 100%;
   background-color: transparent;
 }
 
 /* Courses */
 .courses {
-  width: 25%;
+  flex: 25%;
   text-align: center;
   background-color: transparent;
 }
@@ -154,12 +150,12 @@ header > button {
 }
 .courses-img {
   margin: 4rem 0 1rem 0;
-  width: 6.875rem;
+  max-width: 100%;
 }
 .course-title {
   font-weight: 700;
   font-size: 1.5rem;
-  margin: 0 4rem;
+  margin: 0 2rem;
 }
 .courses-btn {
   border-radius: 7px;
@@ -176,7 +172,7 @@ header > button {
 }
 
 /* Blogs */
-.blogs {
+/* .blogs {
   width: 33.33%;
   margin-bottom: 2rem;
   background-color: transparent;
@@ -211,12 +207,12 @@ header > button {
   font-size: 1.125rem;
   display: block;
   margin: 3rem auto;
-}
+} */
 
 /* Events */
-.event {
+/* .event {
   width: 33.33%;
-  height: 70vh;
+  height: 90vh;
   background-color: transparent;
 }
 .event:nth-child(2),
@@ -225,7 +221,7 @@ header > button {
 }
 .event > img {
   width: 100%;
-  height: 50%;
+  height: 5f0%;
   border-top-left-radius: 2.125rem;
   border-top-right-radius: 2.125rem;
 }
@@ -259,6 +255,9 @@ header > button {
 .datetime-desc:nth-child(2) {
   margin-right: 1.5rem;
 }
+hr {
+  margin-bottom: 1rem;
+}
 .event-btn {
   width: 100%;
   padding: 0.5rem 0;
@@ -268,13 +267,10 @@ header > button {
   margin: 0 auto;
   border-radius: 7px;
   cursor: pointer;
-}
-hr {
-  margin-bottom: 1.5rem;
-}
+} */
 
 /* Review */
-.review {
+/* .review {
   width: 33.33%;
   height: 60vh;
   text-align: center;
@@ -347,10 +343,10 @@ q {
 .rating {
   background-color: transparent;
   width: 9.6875rem;
-}
+} */
 
 /* Footer */
-footer {
+/* footer {
   margin: 20rem 6.375rem 1.5rem 6.375rem;
 }
 .footer-content {
@@ -394,11 +390,60 @@ footer {
   text-align: center;
   font-size: 0.875rem;
   margin: 1.5rem 0;
-}
+} */
 
 /* Tablet */
 @media screen and (max-width: 769px) {
+  /* nav {
+    display: none;
+  } */
+
+  /* header */
   header {
+    margin: auto;
+    margin-bottom: 7.8125rem;
+  }
+  .head-img,
+  .head-text {
+    flex: 100%;
+  }
+  .head-img {
+    order: 1;
+  }
+  .head-text {
+    margin-top: 2rem;
+    order: 2;
+    text-align: center;
+  }
+  .head-text > p {
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+  .head-text > button {
+    width: 100%;
+  }
+
+  /* Course */
+  .row {
+    flex-wrap: wrap;
+  }
+  .courses {
+    flex: auto;
+    max-width: 50%;
+    margin-top: 1rem;
+  }
+  .courses:nth-child(3) {
+    margin-left: 0rem;
+  }
+  .courses:nth-child(2),
+  .courses:nth-child(4) {
+    margin-left: 1rem;
+  }
+  #btnDataMining,
+  #btnSeo {
+    margin: 4rem 0 2rem 0;
+  }
+  /* header {
     margin: 3.4375rem 4.375rem 5.5rem 4.375rem;
   }
   .container {
@@ -418,10 +463,10 @@ footer {
   }
   .card {
     flex: auto;
-  }
+  } */
 
   /* Navbar */
-  nav {
+  /* nav {
     justify-content: space-between;
     padding: 1.875rem 4.375rem 0 4.375rem;
   }
@@ -439,10 +484,10 @@ footer {
   }
   .head-img > img {
     width: 16.875rem;
-  }
+  } */
 
   /* Header */
-  .head-text {
+  /* .head-text {
     margin-top: 3rem;
     margin-right: 2.625rem;
     margin-bottom: 5.9375rem;
@@ -464,12 +509,12 @@ footer {
     font-size: 1rem;
     cursor: pointer;
     top: 100%;
-  }
+  } */
 
   /* Course */
-  .courses {
+
+  /* .courses {
     width: 40%;
-    /* height: 25vh; */
     margin-bottom: 1rem;
   }
   .courses:nth-child(2),
@@ -496,5 +541,60 @@ footer {
   #btnDataMining,
   #btnSeo {
     margin: 1rem 0 1.25rem 0;
+  } */
+}
+
+@media screen and (max-width: 415px) {
+  section {
+    width: 80%;
+  }
+  .content-title > p {
+    size: 0.875rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+  .content-title > h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.6875rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  /* Header */
+  .head-text {
+    margin-top: 2rem;
+    width: 80%;
+  }
+  .head-text > h1 {
+    line-height: normal;
+    font-size: 1.6875rem;
+    text-align: left;
+  }
+  .head-text > p {
+    text-align: justify;
+  }
+  .head-text > button {
+    padding: 0.75rem 0;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 2.25rem;
+  }
+
+  /* Course */
+  .row {
+    flex-wrap: wrap;
+  }
+  .courses {
+    flex: auto;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+  .courses:nth-child(2),
+  .courses:nth-child(3),
+  .courses:nth-child(4) {
+    margin-left: 0;
   }
 }

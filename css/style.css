@@ -138,17 +138,17 @@ header {
 }
 
 /* Courses */
-.courses {
+.course {
   flex: 25%;
   text-align: center;
   background-color: transparent;
 }
-.courses:nth-child(2),
-.courses:nth-child(3),
-.courses:nth-child(4) {
+.course:nth-child(2),
+.course:nth-child(3),
+.course:nth-child(4) {
   margin-left: 2rem;
 }
-.courses-img {
+.course-img {
   margin: 4rem 0 1rem 0;
   max-width: 100%;
 }
@@ -157,7 +157,7 @@ header {
   font-size: 1.5rem;
   margin: 0 2rem;
 }
-.courses-btn {
+.course-btn {
   border-radius: 7px;
   font-size: 1rem;
   cursor: pointer;
@@ -215,44 +215,69 @@ header {
   display: block;
   margin: 1.5rem auto;
 }
-/* .blogs {
-  width: 33.33%;
+/* Events */
+.event {
+  flex: 30%;
+  max-width: 33.3%;
+  height: 70vh;
   margin-bottom: 2rem;
   background-color: transparent;
 }
-.blogs:nth-child(2),
-.blogs:nth-child(3) {
-  margin-left: 3rem;
+.event:nth-child(2),
+.event:nth-child(3) {
+  margin-left: 2rem;
 }
-
-.blogs > img {
+.event > img {
   width: 100%;
-  height: 50%;
+  height: 45%;
   border-top-left-radius: 2.125rem;
   border-top-right-radius: 2.125rem;
 }
-.blog-text {
+.event-text {
   margin: 1.5625rem 1.25rem 0 1.25rem;
 }
-.blog-text > h2 {
+.event-text > h2 {
+  font-weight: 600;
   font-size: 1.125rem;
-  margin-bottom: 1.5625rem;
-  font-weight: 700;
+  margin-bottom: 1rem;
 }
-.blog-text > .blog-desc {
+.event-text > .event-desc {
+  font-weight: 400;
+  font-size: 0.625rem;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+.datetime-event {
+  display: flex;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+.datetime-event > i {
+  font-size: 1.5625rem;
+}
+.datetime-event > .datetime-desc {
+  font-weight: 500;
   font-size: 0.75rem;
+  color: #696969;
+  margin: auto 1rem;
 }
-.read-more {
-  text-decoration: underline;
-  text-transform: uppercase;
-  color: #00adb5;
-  font-weight: bolder;
-  font-size: 1.125rem;
+.datetime-desc:nth-child(2) {
+  margin-right: 1.5rem;
+}
+hr {
+  margin-bottom: 1.5rem;
+}
+.event-btn {
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
   display: block;
-  margin: 3rem auto;
-} */
+  margin: 0 auto;
+  border-radius: 7px;
+  cursor: pointer;
+}
 
-/* Events */
 /* .event {
   width: 33.33%;
   height: 90vh;
@@ -467,19 +492,19 @@ q {
   }
 
   /* Course */
-  .row {
+  .courses {
     flex-wrap: wrap;
   }
-  .courses {
+  .course {
     flex: auto;
     max-width: 50%;
     margin-top: 1rem;
   }
-  .courses:nth-child(3) {
+  .course:nth-child(3) {
     margin-left: 0rem;
   }
-  .courses:nth-child(2),
-  .courses:nth-child(4) {
+  .course:nth-child(2),
+  .course:nth-child(4) {
     margin-left: 2rem;
   }
   #btnDataMining,
@@ -501,10 +526,6 @@ q {
   .blog:nth-child(6) {
     margin-left: 2rem;
   }
-  /* .blog-text {
-    vertical-align: middle;
-    margin: 2rem 1.25rem 0 1.25rem;
-  } */
   .blog-text > h2 {
     font-size: 1rem;
     font-weight: 700;
@@ -514,105 +535,46 @@ q {
     font-size: 0.625rem;
   }
 
-  /* header {
-    margin: 3.4375rem 4.375rem 5.5rem 4.375rem;
-  }
-  .container {
-    margin: 0 4.375rem 10.5rem 4.375rem;
-    display: flex;
-  }
-  .row {
+  /* Event */
+  .events {
     flex-wrap: wrap;
   }
-  .content-title > p {
-    size: 0.75rem;
+  .event {
+    flex: 100%;
+    max-width: 100%;
+    height: 20vh;
+    display: flex;
   }
-  .content-title > h1 {
-    font-size: 1.5rem;
-    margin-top: 0.1875rem;
-    margin-bottom: 2.5rem;
+  .event > img {
+    width: 65%;
+    height: 100%;
+    border-top-left-radius: 2.125rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 2.125rem;
   }
-  .card {
-    flex: auto;
-  } */
-
-  /* Navbar */
-  /* nav {
-    justify-content: space-between;
-    padding: 1.875rem 4.375rem 0 4.375rem;
-  }
-  .link-menu > ul > li > a {
-    font-size: 0.875rem;
-  }
-  .nav > .logo > img {
-    width: 39px;
-  }
-  .login {
-    display: none;
-  }
-  .link-menu > ul > li {
-    margin: 0.75rem 1rem;
-  }
-  .head-img > img {
-    width: 16.875rem;
-  } */
-
-  /* Header */
-  /* .head-text {
-    margin-top: 3rem;
-    margin-right: 2.625rem;
-    margin-bottom: 5.9375rem;
-  }
-  .head-text > h1 {
-    font-size: 1.5rem;
-    line-height: 1.625rem;
-    color: #00adb5;
-  }
-  .head-text > p {
-    font-size: 0.75rem;
-    line-height: 13px;
-    margin-top: 0.875rem;
-    margin-right: 0;
-  }
-  header > button {
-    padding: 0.6875rem 0;
-    width: 100%;
-    font-size: 1rem;
-    cursor: pointer;
-    top: 100%;
-  } */
-
-  /* Course */
-
-  /* .courses {
-    width: 40%;
-    margin-bottom: 1rem;
-  }
-  .courses:nth-child(2),
-  .courses:nth-child(3),
-  .courses:nth-child(4) {
+  .event:nth-child(2),
+  .event:nth-child(3) {
     margin-left: 0;
   }
-  .courses:nth-child(2),
-  .courses:nth-child(4) {
-    margin-left: 1.5rem;
+  .event-text {
+    margin: 1.5625rem 1.25rem 0 1.25rem;
   }
-  .courses-img {
-    margin: 1.25rem 0 1rem 0;
-    width: 3.75rem;
+  .event-text > h2 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.875rem;
   }
-  .course-title {
-    font-size: 1rem;
+  .event-text > .event-desc {
+    font-weight: 400;
+    font-size: 0.625rem;
+    margin-bottom: 1rem;
   }
-  .courses-btn {
-    font-size: 0.75rem;
-    padding: 0.5rem 0;
-    margin: 1rem 0 1.25rem 0;
+  .datetime-event {
+    margin-bottom: 1rem;
   }
-  #btnDataMining,
-  #btnSeo {
-    margin: 1rem 0 1.25rem 0;
-  } */
+  hr {
+    margin-bottom: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 415px) {
@@ -658,14 +620,14 @@ q {
   .row {
     flex-wrap: wrap;
   }
-  .courses {
+  .course {
     flex: auto;
     max-width: 100%;
     margin-top: 1rem;
   }
-  .courses:nth-child(2),
-  .courses:nth-child(3),
-  .courses:nth-child(4) {
+  .course:nth-child(2),
+  .course:nth-child(3),
+  .course:nth-child(4) {
     margin-left: 0;
   }
 
@@ -701,10 +663,55 @@ q {
     text-align: left;
     border-radius: 2.125rem;
   }
-  .blog-desc {
-    display: none;
+  .blog-text > h2 {
+    font-size: 0.875rem;
   }
   .read-more {
     font-size: 1rem;
+  }
+
+  /* Event */
+  .event {
+    height: 40vh;
+  }
+  .event > img {
+    width: 45%;
+    height: 100%;
+  }
+  .event-text {
+    margin: 1.5625rem 1.25rem 0 1.25rem;
+    border-radius: 2.125rem;
+  }
+  .event-text > h2 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.875rem;
+  }
+  .event-text > .event-desc {
+    font-weight: 400;
+    font-size: 0.625rem;
+    margin-bottom: 0.5rem;
+  }
+  .datetime-event {
+    display: inline;
+    margin-bottom: 1rem;
+  }
+  .datetime-event > i {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding: 0;
+  }
+  .datetime-event > .datetime-desc {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 0.625rem;
+    color: #696969;
+    margin: 0.25rem auto 0 0.5rem;
+  }
+  .datetime-event > .datetime-desc:last-child {
+    margin-bottom: 1rem;
+  }
+  hr {
+    margin-bottom: 0.75rem;
   }
 }

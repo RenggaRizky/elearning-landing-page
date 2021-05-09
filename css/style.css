@@ -317,8 +317,8 @@ hr {
 }
 
 /* Footer */
-/* footer {
-  margin: 20rem 6.375rem 1.5rem 6.375rem;
+footer {
+  margin: 12rem 6.375rem 1.5rem 6.375rem;
 }
 .footer-content {
   display: flex;
@@ -326,7 +326,7 @@ hr {
   margin-bottom: 4.5625rem;
 }
 .company-desc {
-  width: 60%;
+  width: 50%;
 }
 .company-desc > img {
   margin-bottom: 1.375rem;
@@ -341,7 +341,7 @@ hr {
   font-size: 0.875rem;
   flex: auto;
   justify-content: space-between;
-  width: 40%;
+  width: 50%;
 }
 .list-title {
   font-size: 1rem;
@@ -361,7 +361,10 @@ hr {
   text-align: center;
   font-size: 0.875rem;
   margin: 1.5rem 0;
-} */
+}
+#companyName {
+  color: #00adb5;
+}
 
 /* Tablet */
 @media screen and (max-width: 769px) {
@@ -510,6 +513,21 @@ hr {
   .review > .rating {
     max-width: 50%;
   }
+
+  /* Footer */
+  .footer-content {
+    flex-wrap: wrap;
+  }
+  .company-desc {
+    margin-bottom: 5rem;
+  }
+  .company-desc,
+  .footer-list-content {
+    flex: 100%;
+  }
+  .company-desc > p {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 415px) {
@@ -526,7 +544,6 @@ hr {
     margin-bottom: 2rem;
     font-size: 1.6875rem;
   }
-
   nav {
     display: none;
   }
@@ -677,5 +694,21 @@ hr {
   }
   .review > .rating {
     max-width: 50%;
+  }
+
+  /* Footer */
+  footer {
+    margin: 0 auto;
+    width: 85%;
+  }
+  .footer-list-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us,
+  .guides,
+  .services {
+    flex: 100%;
+    margin-bottom: 2rem;
   }
 }
